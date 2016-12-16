@@ -1,0 +1,402 @@
+@charset "utf-8";
+
+/*
+	co - common
+	tp - toppage
+	ab - about
+	wo - works
+	bl - blog
+*/
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html, body, #app, .co-App {
+	width: 100%;
+	height: 100%;
+	font-size: 14px;
+	font-family: "Roboto Light", "Roboto", "ヒラギノ角ゴ Pro", "メイリオ";
+	background-color: rgb(247, 247, 245);
+}
+
+a{
+	color: rgb(49, 72, 56);
+	text-decoration: none;
+	transition: all 1s ease;
+}
+
+a:hover{
+	color: rgb(19, 12, 13);
+}
+
+.co-Main {
+	width: 100%;
+	height: 100%;
+	background-color: rgb(247, 247, 245);
+}
+
+.co-Main_Header {
+	width: 100%;
+	height: 70px;
+	background-color: #fff;
+	border-bottom: 1px solid #ccc;
+}
+
+.co-Main-Header-Title, .tp-Main-Header-Title {
+	margin-left: 10%;
+	margin-right: 50px;
+	font-size: 28px;
+	line-height: 70px;
+	min-width: 280px;
+	text-transform: capitalize;
+	color: rgb(128, 121, 123);
+	float: left;
+}
+
+.co-Main-Header-Title a {
+	color: rgba(60, 55, 52, 0.78);
+}
+
+.co-Main_Header_Title-e1 {
+	color: #a8c97f;
+}
+
+.co-Main_Header_Title-e2 {
+	color: #d9ba8c;
+}
+
+.co-Main_Header_Navi {
+	margin-right: 10%;
+	display: flex;
+	float: right;
+	list-style: none;
+}
+
+.co-Main_Header_Navi_List {
+	flex-direction: row;
+	width: 120px;
+	height: 70px;;
+}
+
+.co-Main_Header_Navi_List a {
+	display: block;
+	width: inherit;
+	height: inherit;
+	font-size: 22px;
+	text-align: center;
+	line-height: 70px;
+}
+
+.co-Main_Header_Navi_List:not(.co-ActiveCell) > a:hover{
+	background-color: rgba(135, 172, 66, 0.35);
+}
+
+.co-Main_Footer {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	font-size: 12px;
+	color: #ccc;
+	z-index: 10;
+}
+
+.co-ActiveCell {
+	background-color: rgba(235, 172, 66, 0.3);
+}
+
+.co-Title {
+	width: 100%;
+	height: 220px;
+	background-image: url("images/frame-left-top.png"),-webkit-gradient(linear,left top,right bottom,from(rgba(146, 179, 113, 0.5)),to(rgba(118, 142, 82, 0.1))),url("images/frame-right-bottom.png");
+	background-position: left top,left,right bottom;
+	background-repeat: no-repeat,no-repeat,no-repeat;
+	color: rgb(89, 74, 78);
+	text-align: center;
+	font-size: 48px;
+	line-height: 220px;
+}
+
+.tp-Main {
+	width: 100%;
+	height: 100%;
+	background-color: transparent;
+}
+
+.tp-Main_Header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 70px;
+	background-color: rgba(255,255,255,.4);
+	overflow: hidden;
+	z-index: 1;
+}
+
+.tp-Main-Header-Title a {
+	color: rgba(191, 197, 202, 1);
+}
+
+.tp-Main_Content {
+	position: fixed;
+	top: 70px;
+	left: 0;
+	width: 100%;
+	height: calc(100% - 70px);
+	z-index: 1;
+}
+
+.tp-Main_Content_Message {
+	height: 100%;
+	margin-left: 10%;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	color: #ccc;
+}
+
+.tp-Background {
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: url("images/back003.jpg") no-repeat;
+	background-size: cover;
+	width: 100%;
+	height: 100%;
+	z-index: 0;
+}
+
+.ab-Introduction {
+	width: 100%;
+//	height: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+.ab-Thumbnail {
+	display: block;
+	width: 300px;
+	height: 300px;
+	margin: 50px auto;
+	border-radius: 50%;
+}
+
+.ab-SkillList {
+	margin-left: 30px;
+	list-style-type: circle;
+}
+
+.ab-SkillList > li {
+	line-height: 32px;
+}
+
+.wo-Content {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+.wo-Tile {
+	width: 350px;
+	height: 450px;
+	position: relative;
+	cursor: pointer;
+}
+
+.wo-Tile:after {
+	content: "";
+	width: 350px;
+	height: 450px;
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	background-color: rgba(50, 50, 50, 0.4);
+	filter: blur(5px);
+	z-index: -2;
+}
+
+.wo-Tile_Inner {
+	position: absolute;
+	top: 350px;
+	width: 350px;
+	height: 100px;
+	background-color: rgba(255, 255, 255, 0.4);
+}
+
+.wo-Tile_Inner:before{
+  content: '';
+  background: inherit;
+  filter: blur(5px);
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  z-index: -1;
+}
+
+.wo-ModalWindow {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 80vw;
+	height: 80vh;
+}
+
+.wo-BlackLayer {
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 100vw;
+	height: 100vh;
+	z-index: 10;
+	background-color: rgba(0, 0, 0, .4);
+}
+
+.bl-Article {
+	width: 100%;
+}
+
+.bl-Article_List, .bl-Markdown {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+.bl-Markdown_Inner {
+	width: 80%;
+	line-height: 32px;
+}
+
+.bl-Markdown_Inner > h1, .bl-Markdown_Inner > h2, .bl-Markdown_Inner > h3, .bl-Markdown_Inner > h4, .bl-Markdown_Inner > h5, .bl-Markdown_Inner > h6 {
+	margin: 15px 0;
+}
+
+.bl-Markdown_Inner > h2 {
+	padding-left: 5px;
+	padding-bottom: 3px;
+	font-size: 30px;
+	border-bottom: 1px dotted #ccc;
+}
+
+.block {
+	display: block;
+}
+
+.ma5{
+	margin: 5px;
+}
+
+.ma10 {
+	margin: 10px;
+}
+
+.ma20 {
+	margin: 20px;
+}
+
+.ma30 {
+	margin: 30px;
+}
+
+.mtb5 {
+	margin: 5px 0;
+}
+
+.mtb10 {
+	margin: 10px 0;
+}
+
+.mtb20 {
+	margin: 20px 0;
+}
+
+.mtb50 {
+	margin: 50px 0;
+}
+
+.size12 {
+	font-size: 12px;
+}
+
+.size14 {
+	font-size: 14px;
+}
+
+.size16 {
+	font-size: 16px;
+}
+
+.size18 {
+	font-size: 18px;
+}
+
+.size20 {
+	font-size: 20px;
+}
+
+.size22 {
+	font-size: 22px;
+}
+
+.size24 {
+	font-size: 24px;
+}
+
+.size26 {
+	font-size: 26px;
+}
+
+.size28 {
+	font-size: 28px;
+}
+
+.lh30 {
+	line-height: 30px;
+}
+
+.lh40 {
+	line-height: 40px;
+}
+
+.ta-Right {
+	text-align: right;
+}
+
+/* for bootstrap-table */
+
+.react-bs-table-container {
+	width: 80%;
+}
+
+.react-bs-table, .react-bs-container-header, .react-bs-container-header > table, .react-bs-container-body > table {
+	width: 100%;
+}
+
+.react-bs-container-body > table > tbody > tr {
+	height: 50px;
+}
+
+.react-bs-container-header > table > thead > tr > th ,.react-bs-container-body > table > tbody > tr > td {
+	padding-left: 5px;
+}
+
+.react-bs-container-body > table > tbody > tr:nth-child(2n) {
+	background-color: #e7e7cb;
+}
+
+.react-bs-container-header > table {
+	border-bottom: 2px solid #ccc;
+}
+
+/* for code */
+pre > code {
+	display: block;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding-left: 10px;
+	background-color: #333;
+	color: #8790b4;
+}
