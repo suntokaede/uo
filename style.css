@@ -18,6 +18,7 @@ html, body, #app, .co-App {
 	height: 100%;
 	font-size: 14px;
 	font-family: "Roboto Light", "Roboto", "ヒラギノ角ゴ Pro", "メイリオ";
+	font-feature-settings : "palt";
 	background-color: rgb(247, 247, 245);
 }
 
