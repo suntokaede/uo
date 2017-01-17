@@ -18,7 +18,7 @@ html, body, #app, .co-App {
 	height: 100%;
 	font-size: 14px;
 	font-family: "Roboto Light", "Roboto", "ヒラギノ角ゴ Pro", "メイリオ";
-	font-feature-settings : "palt" 1;
+	font-feature-settings : "palt";
 	background-color: rgb(247, 247, 245);
 }
 
@@ -167,7 +167,7 @@ a:hover{
 	position: fixed;
 	top: 0;
 	left: 0;
-	background: url("images/back004.jpg") no-repeat;
+	background: url("images/back003.jpg") no-repeat;
 	background-size: cover;
 	width: 100%;
 	height: 100%;
@@ -179,6 +179,10 @@ a:hover{
 //	height: 100%;
 	display: flex;
 	justify-content: center;
+}
+
+.ab-Introduction-name {
+	font-family: 'Dancing Script';
 }
 
 .ab-Thumbnail {
@@ -208,7 +212,7 @@ a:hover{
 	width: 350px;
 	height: 450px;
 	position: relative;
-        z-index: 0;
+	z-index: 0;
 	cursor: pointer;
 }
 
@@ -242,6 +246,12 @@ a:hover{
   right: -5px;
   bottom: -5px;
   z-index: -1;
+}
+
+.wo-Tile-Title {
+	color: #e5e5e5;
+	font-family: 'Dancing Script';
+	text-shadow: 2px 2px 1px rgba(1, 5, 71, 1.0); 
 }
 
 .wo-ModalWindow {
@@ -358,6 +368,10 @@ a:hover{
 
 .size28 {
 	font-size: 28px;
+}
+
+.size32 {
+	font-size: 32px;
 }
 
 .lh30 {
