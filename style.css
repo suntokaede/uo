@@ -177,7 +177,7 @@ a:hover{
 .ab-Photo {
 	height: calc(100vh - 71px);
 	width: 50%;
-	background: url("images/bird.png") no-repeat;
+	background: url("images/bird.jpg") no-repeat;
 	background-size: cover;
 }
 
