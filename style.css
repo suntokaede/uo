@@ -160,15 +160,13 @@ a:hover{
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
-	color: #ccc;
+	color: #333;
 }
 
 .tp-Background {
 	position: fixed;
 	top: 0;
 	left: 0;
-	background: url("images/back004.jpg") no-repeat center center;
-	background-size: cover;
 	width: 100%;
 	height: 100%;
 	z-index: 0;
