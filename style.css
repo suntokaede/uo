@@ -241,6 +241,13 @@ a:hover{
 	cursor: pointer;
 }
 
+.wo-Description {
+	position: fixed;
+	bottom: 5px;
+	left: 5px;
+	z-index: 10;
+}
+
 .wo-MenuButton {
 	display: block;
     width: 42px;
