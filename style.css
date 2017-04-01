@@ -160,7 +160,7 @@ a:hover{
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
-	color: #333;
+	color: #fff;
 }
 
 .tp-Background {
@@ -230,6 +230,7 @@ a:hover{
 }
 
 .wo-SideMenu > li {
+	font-family: 'Josefin Slab';
 	font-size: 22px;
 	line-height: 42px;
 	list-style: none;
